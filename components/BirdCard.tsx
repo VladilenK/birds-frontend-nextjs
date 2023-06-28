@@ -4,17 +4,16 @@ import { useState } from "react";
 import Image from "next/image";
 
 // import { calculateCarRent, generateCarImageUrl } from "@/utils";
-import { generateCarImageUrl } from "@/utils";
-import { CarProps } from "@/types";
+import { BirdProps } from "@/types";
 import CustomButton from "./CustomButton";
-import CarDetails from "./CarDetails";
+import BirdDetails from "./BirdDetails";
 
-interface CarCardProps {
-  car: CarProps;
+interface BirdCardProps {
+  bird: BirdProps;
 }
 
-const CarCard = ({ car }: CarCardProps) => {
-  const { city_mpg, year, make, model, transmission, drive } = car;
+const BirdCard = ({ bird }: BirdCardProps) => {
+  const { taxon } = bird;
 
   const [isOpen, setIsOpen] = useState(false);
 
@@ -24,38 +23,31 @@ const CarCard = ({ car }: CarCardProps) => {
     <div className="car-card group">
       <div className="car-card__content">
         <h2 className="car-card__content-title">
-          {make} {model}
+          {taxon} 
         </h2>
       </div>
 
-      {/* <p className='flex mt-6 text-[32px] leading-[38px] font-extrabold'>
+      {/* <p className='flex mt-6 text-[18px] leading-[16px] font-extrabold'>
         <span className='self-start text-[14px] leading-[17px] font-semibold'>$</span>
-        {carRent}
+        {taxon}
         <span className='self-end text-[14px] leading-[17px] font-medium'>/day</span>
       </p> */}
 
       <div className='relative w-full h-40 my-3 object-contain'>
-        <Image src={generateCarImageUrl(car)} alt='bird image' fill priority className='object-contain' />
+        <a href={bird.targetUrl}>
+          <Image src={bird.url} alt={taxon} fill priority className='object-contain' />
+        </a>
       </div>
 
       <div className='relative flex w-full mt-2'>
-        {/* <div className='flex group-hover:invisible w-full justify-between text-grey'>
+        <div className='flex w-full justify-between text-grey'>
           <div className='flex flex-col justify-center items-center gap-2'>
-            <Image src='/steering-wheel.svg' width={20} height={20} alt='steering wheel' />
             <p className='text-[14px] leading-[17px]'>
-              {transmission === "a" ? "Automatic" : "Manual"}
+              Source site: <a href={bird.targetUrl}>{bird.origSiteName}</a><br/>
+              Location: {bird.origLocation}
             </p>
           </div>
-          <div className="car-card__icon">
-            <Image src="/tire.svg" width={20} height={20} alt="seat" />
-            <p className="car-card__icon-text">{drive.toUpperCase()}</p>
-          </div>
-          <div className="car-card__icon">
-            <Image src="/gas.svg" width={20} height={20} alt="seat" />
-            <p className="car-card__icon-text">{city_mpg} MPG</p>
-          </div>
-        </div> */}
-
+        </div>
         {/* <div className="car-card__btn-container">
           <CustomButton
             title='View More'
@@ -67,9 +59,9 @@ const CarCard = ({ car }: CarCardProps) => {
         </div> */}
       </div>
 
-      <CarDetails isOpen={isOpen} closeModal={() => setIsOpen(false)} car={car} />
+      {/* <BirdDetails isOpen={isOpen} closeModal={() => setIsOpen(false)} bird={bird} /> */}
     </div>
   );
 };
 
-export default CarCard;
+export default BirdCard;

@@ -1,7 +1,24 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
     images: {
-        domains: ["cdn.imagin.studio"]
+        remotePatterns: [
+            {
+                protocol: "https",
+                hostname: "birds.kg",
+            },
+            {
+                protocol: "https",
+                hostname: "*.birds.watch",
+            },
+            {
+                protocol: "https",
+                hostname: "sibirds.ru",
+                },
+            {
+                protocol: "https",
+                hostname: "erbirds.ru",
+            },
+        ],
     }
 
 }

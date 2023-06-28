@@ -1,46 +1,7 @@
-export const manufacturers = [
-    "Acura",
-    "Alfa Romeo",
-    "Aston Martin",
-    "Audi",
-    "Bentley",
-    "BMW",
-    "Buick",
-    "Cadillac",
-    "Chevrolet",
-    "Chrysler",
-    "Citroen",
-    "Dodge",
-    "Ferrari",
-    "Fiat",
-    "Ford",
-    "GMC",
-    "Honda",
-    "Hyundai",
-    "Infiniti",
-    "Jaguar",
-    "Jeep",
-    "Kia",
-    "Lamborghini",
-    "Land Rover",
-    "Lexus",
-    "Lincoln",
-    "Maserati",
-    "Mazda",
-    "McLaren",
-    "Mercedes-Benz",
-    "MINI",
-    "Mitsubishi",
-    "Nissan",
-    "Porsche",
-    "Ram",
-    "Rolls-Royce",
-    "Subaru",
-    "Tesla",
-    "Toyota",
-    "Volkswagen",
-    "Volvo",
-  ];
+export const names = [
+  "Duck",
+  "Eagle"  
+];
   
   export const yearsOfProduction = [
     { title: "Year", value: "" },
@@ -57,15 +18,15 @@ export const manufacturers = [
   
   export const fuels = [
     {
-      title: "Fuel",
+      title: "Author",
       value: "",
     },
     {
-      title: "Gas",
+      title: "Author-1",
       value: "Gas",
     },
     {
-      title: "Electricity",
+      title: "Author-2",
       value: "Electricity",
     },
   ];

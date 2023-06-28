@@ -2,8 +2,8 @@ import { Footer, Navbar } from '@/components'
 import './globals.css'
 
 export const metadata = {
-  title: 'Car hub',
-  description: 'Discove the best cars in the world!',
+  title: 'Birds of the World',
+  description: 'Discover all birds in the world!',
 }
 
 export default function RootLayout({

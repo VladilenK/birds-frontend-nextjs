@@ -4,10 +4,10 @@ import Navbar from "./Navbar";
 import Footer from "./Footer";
 import SearchBar from "./SearchBar";
 import CustomFilter from "./CustomFilter";
-import SearchManufacturer from "./SearchManufacturer";
-import CarCard from "./CarCard";
+import SearchTaxon from "./SearchTaxon";
+import BirdCard from "./BirdCard";
 import ShowMore from "./ShowMore";
-import CarDetails from "./CarDetails";
+import BirdDetails from "./BirdDetails";
 
 export {
     Hero,
@@ -16,8 +16,8 @@ export {
     Footer,
     CustomFilter,
     SearchBar,
-    SearchManufacturer,
-    CarCard,
+    SearchTaxon,
+    BirdCard,
     ShowMore,
-    CarDetails
+    BirdDetails
 }
