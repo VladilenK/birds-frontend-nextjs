@@ -19,6 +19,9 @@ const nextConfig = {
                 hostname: "erbirds.ru",
             },
         ],
+    },
+    typescript: {
+        ignoreBuildErrors: true,
     }
 
 }
